@@ -2,6 +2,9 @@
   "name": "rvr-dpr",
   "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "build": "npm install --include=dev --prefix frontend && npm run build --prefix frontend"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
