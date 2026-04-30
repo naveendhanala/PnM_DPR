@@ -3,13 +3,8 @@
   "installCommand": "npm install && npm install --prefix frontend",
   "buildCommand": "npm run build --prefix frontend",
   "outputDirectory": "frontend/dist",
-  "functions": {
-    "api/index.js": {
-      "includeFiles": "backend/**"
-    }
-  },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/(.*)",     "destination": "/index.html" }
+    { "source": "/api/:path*", "destination": "/api/server" },
+    { "source": "/(.*)",       "destination": "/index.html" }
   ]
 }
